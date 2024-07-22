@@ -59,7 +59,7 @@ def handle_example(message):
     bot.reply_to(message, """
 📌Ecco la guida completa su coame mettere linux sul tuo dispositivo. (segui attentamente i passaggi)
 @1: Scaricare l'immagine ISO di Linux
-Scegliere una distribuzione Linux: Vai al sito ufficiale della distribuzione Linux che desideri installare (ad esempio Ubuntu, Fedora, Debian).
+Scegliere una distribuzione Linux: Vai al sito ufficiale della distribuzione Linux che desideri installare (ad esempio Ubuntu(https://www.ubuntu-it.org/download), Fedora(https://fedoraproject.org/it/coreos/), Debian(https://www.debian.org/index.it.html) ).
 
 Per Ubuntu: ubuntu.com
 Per Fedora: getfedora.org
