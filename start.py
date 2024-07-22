@@ -130,14 +130,15 @@ Rimuovi la chiavetta USB quando ti viene chiesto di farlo.
 Passo 5: Avvio nel nuovo sistema Linux
 Riavviare il dispositivo: Dopo il riavvio, il dispositivo dovrebbe avviarsi nel nuovo sistema operativo Linux.
 
-Configurare il sistema: Segui le eventuali configurazioni post-installazione, come aggiornamenti del sistema, installazione di driver e software aggiuntivi. Consigliamo inoltre di installare yay (puoi trovare la guida completa facendo il comando /yay)c""")
+Configurare il sistema: Segui le eventuali configurazioni post-installazione, come aggiornamenti del sistema, installazione di driver e software aggiuntivi. Consigliamo inoltre di installare yay (puoi trovare la guida completa facendo il comando /yay) """)
 
 
 # Gestisci il comando /yay
 @bot.message_handler(commands=['yay'])
 def handle_example(message):
     # Esempio di implementazione di un comando personalizzato
-    bot.reply_to(message, """Ecco la guida completa su come scaricare yay sul tuo sistema operativo LINUX. 
+    bot.reply_to(message, """
+Ecco la guida completa su come scaricare yay sul tuo sistema operativo LINUX. 
 1 Apri la konsole. 
 
 2 Esegui in ordine i seguenti comandi nella konsole. 
