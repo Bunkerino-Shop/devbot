@@ -31,6 +31,10 @@ def forward_to_support(message):
     forwarded_message = bot.forward_message(SUPPORT_GROUP_ID, user_id, message.message_id)
     assistenza_sessions[user_id]['last_forwarded_message_id'] = forwarded_message.message_id
 
+    # Controlla se il comando "stopassistenza" è stato inviato
+    #if message.text == "stopassistenza":
+    #    assistenza_sessions[user_id]['active'] = False
+
 # Gestisci i messaggi dal gruppo di supporto e inoltrali all'utente specifico
 @bot.message_handler(func=lambda message: message.chat.id == SUPPORT_GROUP_ID)
 def forward_to_user(message):
@@ -38,6 +42,10 @@ def forward_to_user(message):
         user_id = message.reply_to_message.forward_from.id
         if user_id in assistenza_sessions and assistenza_sessions[user_id]['active']:
             bot.send_message(user_id, message.text)
+
+            # Controlla se il comando "staffstopassistenza" è stato inviato
+            #if message.text == "staffstopassistenza":
+            #   assistenza_sessions[user_id]['active'] = False
     else:
         # Identificare l'utente dal contenuto del messaggio
         original_message_id = message.reply_to_message.message_id if message.reply_to_message else None

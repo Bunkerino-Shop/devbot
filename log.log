@@ -1,0 +1,7 @@
+20:20:19 - DEBUG - Getting token from .env file
+20:20:44 - DEBUG - Getting token from .env file
+20:21:57 - DEBUG - Getting token from .env file
+20:21:57 - INFO - Bot created
+20:28:58 - DEBUG - Getting token from .env file
+20:28:58 - INFO - Bot created
+20:28:58 - ERROR - Error starting polling: 'NoneType' object has no attribute 'polling'
