@@ -17,19 +17,19 @@ def create_logger() -> None:
 def get_token_from_env() -> str:
     logging.debug("Getting token from .env file")
     load_dotenv()
-    return os.getenv("TOKEN")
+    return os.getenv("TOKEN", "")
 
 def main() -> None:
     create_logger()
     try:
-        bot = BotConnect(get_token_from_env())
+        token = get_token_from_env()
+        bot = BotConnect(token)
+        bot.create_telebot()
         logging.info("Bot created")
     except Exception as e:
         logging.error(f"Error while creating bot: {e}")
-        return
-    
+        exit(1)
     bot.start_polling()
-    
     
 
 if __name__ == "__main__":
