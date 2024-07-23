@@ -10,3 +10,4 @@ def register(bot):
             'last_forwarded_message_id': None
         }
         bot.reply_to(message, 'Sei in contatto con il supporto. Invia i tuoi messaggi e ti risponderemo al più presto.')
+        bot.send_message(SUPPORT_GROUP_ID, f'Nuova sessione di assistenza avviata da {user_id}.')
